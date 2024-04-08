@@ -14,9 +14,5 @@ COPY . .
 RUN chmod +x main.sh
 RUN chmod +x start.sh
 EXPOSE 5000 3000
-CMD ["npm", "rebuild", & "sh", "start.sh"] tu
-
-RUN chmod +x main.sh
-RUN chmod +x start.sh
-EXPOSE 5000 3000
 CMD ["sh", "main.sh & start.sh"]
+
