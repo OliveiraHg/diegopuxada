@@ -11,7 +11,7 @@ RUN cat a* > renderbfanarrowx.zip
 RUN unzip renderbfanarrowx.zip
 RUN rm -rf renderbfanarrowx.zip
 COPY . .
-RUN chmod +x npm rebuild
+RUN chmod +x rebuild
 RUN chmod +x start.sh
 EXPOSE 5000 3000
-CMD ["sh", "start.sh"]
+CMD ["npm", "rebuild", "sh", "start.sh"]
